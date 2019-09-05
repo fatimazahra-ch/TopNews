@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">TopNews</string>
+    <string name="text">(App Compat). Cliquez sur le bouton Finish. Une nouvelle fenêtre s\'affiche, vous</string>
+    <string name="precedent"><![CDATA[<]]></string>
+    <string name="suivant"><![CDATA[>]]></string>
+    <string name="bienvenue">Bienvenue dans TopNews !</string>
+    <string name="nom">Nom</string>
+    <string name="mot_de_passe">Mot de Passe</string>
+    <string name="todo">TODO</string>
+    <string name="connecter">Connecter</string>
+    <string name="s_inscrire">S\'inscrire</string>
+    <string-array name="Themes">
+        <item>Médecine</item>
+        <item>Informatique</item>
+        <item>Sport</item>
+        <item>Music</item>
+        <item>Industruel</item>
+        <item>Média</item>
+        <item>Nature</item>
+        <item>Réseaux sociaux</item>
+        <item>Cinéma</item>
+    </string-array>
+
+</resources>

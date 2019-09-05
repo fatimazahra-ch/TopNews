@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.MainActivity">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pprojet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/nom_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/nom"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColorHighlight="@android:color/holo_orange_dark"
+            android:textColorLink="@android:color/holo_orange_dark"
+            android:textCursorDrawable="@android:color/holo_orange_dark"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toBottomOf="@+id/form"
+            app:layout_constraintEnd_toEndOf="@+id/form"
+            app:layout_constraintHorizontal_bias="0.761"
+            app:layout_constraintStart_toStartOf="@+id/form"
+            app:layout_constraintTop_toTopOf="@+id/form"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/mot_de_passe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/edittext_background"
+            android:hint="@string/mot_de_passe"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHighlight="@android:color/holo_orange_dark"
+            android:textColorLink="@android:color/holo_orange_dark"
+            android:textCursorDrawable="@android:color/holo_orange_dark"
+            android:textSize="11dp"
+            app:layout_constraintBottom_toBottomOf="@+id/form"
+            app:layout_constraintEnd_toEndOf="@+id/form"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="@+id/form"
+            app:layout_constraintTop_toBottomOf="@+id/nom_form" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- This is the second step -->
+
+    <Button
+        android:id="@+id/connecter"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/button_background"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Connecter"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/form"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="S'inscrire"
+        android:textAllCaps="false"
+        android:textColor="#f9c89e"
+        android:textSize="11dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/connecter"
+        app:layout_constraintVertical_bias="0.792" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

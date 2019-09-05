@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/ic_profile"
+            android:title="Consulter le profile" />
+
+        <item
+            android:id="@+id/modifier_profile"
+            android:icon="@drawable/ic_modifier"
+            android:title="Modifier le profile" />
+
+    </group>
+
+    <item android:title="">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/ajouter_theme"
+                    android:icon="@drawable/ic_add_theme"
+                    android:title="Ajouter un sujet" />
+
+                <item
+                    android:id="@+id/proposer_theme"
+                    android:icon="@drawable/ic_suggest_theme"
+                    android:title="Proposer un sujet" />
+
+            </group>
+        </menu>
+    </item>
+
+
+</menu>
