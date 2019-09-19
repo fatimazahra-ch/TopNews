@@ -46,6 +46,3 @@ public class Person {
             this.email_Person = email_Person;
         }
 }
-
-
-//==| L'objet Person est crée , maintenant il faut l'utiliser dans le controlleur
