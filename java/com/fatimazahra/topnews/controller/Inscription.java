@@ -226,8 +226,6 @@ public class Inscription extends AppCompatActivity {
     private void MyTelephonyManager(){
         TelephonyManager manager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
         IMEInumber = manager.getDeviceId();
-
-        //  Toast.makeText(this," IMEI number : "+ IMEInumber, Toast.LENGTH_SHORT).show();
     }
 
 }
