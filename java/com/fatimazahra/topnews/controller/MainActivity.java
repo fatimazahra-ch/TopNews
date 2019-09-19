@@ -55,10 +55,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //mPreference = getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-        //editor = mPreference.edit();
-
-
         this.nom_form = (EditText) findViewById(R.id.nom_form);
         this.mot_de_passe = (EditText) findViewById(R.id.mot_de_passe);
         this.connecter = (Button) findViewById(R.id.connecter);
@@ -137,13 +133,11 @@ public class MainActivity extends AppCompatActivity {
         TelephonyManager manager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
         IMEInumber = manager.getDeviceId();
 
-      //  Toast.makeText(this," IMEI number : "+ IMEInumber, Toast.LENGTH_SHORT).show();
     }
 
 
     private void validate(String nom, String motDePasse, String IMEI){
 
-          ///////////     Pour le cas d'une base de données externe    ///
         DatabaseAcces dbAcces = DatabaseAcces.getInstance(getApplicationContext());
         dbAcces.open();
 
@@ -151,15 +145,12 @@ public class MainActivity extends AppCompatActivity {
 
         if( exist != 0 ){
 
-            //editor.putLong(KEY_ID, exist).apply();
             Intent autreActivite = new Intent(MainActivity.this, Main2Activity.class);
             autreActivite.putExtra("Id", exist);
             startActivity(autreActivite);
             finish();
 
         } else {
-//            if ((nom.equals(c.getString(1))) && !(motDePasse.equals(c.getString(2)))){
-//                Toast.makeText(this, "Mot de Passe n'est pas correct !", Toast.LENGTH_SHORT).show();
                 counter--;
                 if( counter == 0 )
                 {
@@ -169,33 +160,6 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "Informations Invalides !", Toast.LENGTH_SHORT).show();
                 }
         }
-
-        //dbAcces.close();
-
-       /* long res = db.checkUser(nom, motDePasse, IMEI);
-        if(res != 0 ){
-
-            Toast.makeText(MainActivity.this, "Bienvenue", Toast.LENGTH_SHORT).show();
-            Intent autreActivite = new Intent(MainActivity.this, Main2Activity.class);
-            autreActivite.putExtra("Id", res);
-            startActivity(autreActivite);
-            finish();
-
-        } else {
-
-            counter--;
-            if( counter == 0 )
-            {
-                connecter.setEnabled(false);
-                Toast.makeText(this, "Impossible de se connecter!", Toast.LENGTH_SHORT).show();
-
-            } else {
-                Toast.makeText(this, "Informations Invalides !", Toast.LENGTH_SHORT).show();
-            }
-
-        }*/
-
-
     }
 
 }
